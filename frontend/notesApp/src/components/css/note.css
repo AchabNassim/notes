@@ -1,0 +1,51 @@
+#newNote {
+    height: 100%;
+    margin: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.noteHeader {
+    outline: none;
+    text-decoration: none;
+    font-weight: medium;
+    font-size: 2.4rem;
+    width: 100%;
+    word-wrap: break-word;
+    /* text-align: center; */
+    /* margin: 0 auto; */
+}
+
+.noteParag {
+    margin-top: 40px;
+    outline: none;
+    text-decoration: none;
+    font-size: 1.4rem;
+    width: 96%;
+    word-wrap: break-word;
+    line-height: 30px;
+}
+
+
+/* #editableHeader {
+    flex: 0 0 10%;
+} */
+
+#editableParag {
+    flex: 0 0 60%;
+}
+
+.actionSvg {
+    margin-right: 12px;
+}
+
+#editSvg:hover path {
+    fill: #FFD275   ;
+    stroke: #FFD275   ;
+}
+
+#eraseSvg:hover path {
+    /* fill: #FF6977; */
+    stroke: #FF6977;
+}

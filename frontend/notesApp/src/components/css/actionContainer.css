@@ -1,0 +1,50 @@
+.actionContainer {
+    /* margin: 2px auto; */
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #F5F7F8;
+    height: 42px;
+    border-radius: 6px;
+    transition: 0.2s ease-out;
+    background: rgba(46, 47, 48, 0.4); /* Dark grey, semi-transparent */
+    backdrop-filter: blur(8px); /* Add blur for glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for depth */
+    border-radius: 10px; /* Rounded corners for smooth look */
+
+}
+
+.actionContainer:hover {
+    background-color: #FFAD5B   !important;
+    transform: scale(1.05);
+}
+
+ul {
+    background-color: #2E2F30;
+    border-radius: 3%;
+    width: 145%;
+    padding: 5px;
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    list-style: none;
+    line-height: 12px;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 8px;
+}
+
+li:hover {
+    background-color: #FFAD5B  ;
+}
+
+.actionClicked {
+    background-color: #FFAD5B  ;
+}

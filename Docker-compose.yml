@@ -1,0 +1,30 @@
+services:
+  backend:
+    build: ./backend/.
+    image: nodejs:local
+    container_name: backend
+    ports:
+      - "3000:3000"
+    networks:
+      - local_network
+    volumes:
+      - api:/api
+  frontend:
+    build: ./frontend/.
+    image: react:local
+    container_name: frontend
+    ports:
+      - "80:80"
+    networks:
+      - local_network
+    volumes:
+      - app:/app
+    depends_on:
+      - backend
+
+networks:
+  local_network:
+
+volumes:
+  api:
+  app:

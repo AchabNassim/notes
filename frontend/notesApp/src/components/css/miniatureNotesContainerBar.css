@@ -1,0 +1,14 @@
+#newNoteSvg {
+    transition: 0.5s ease-in-out;
+}
+
+#newNoteSvg:hover path {
+    fill: #FFAD5B ;
+    stroke: #FFAD5B ;
+}
+
+#newNoteSvg:active path {
+    fill: #121415;
+    stroke: #121415;
+}
+

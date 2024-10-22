@@ -1,0 +1,10 @@
+<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Todo" clip-path="url(#clip0_182_68)">
+<path id="Vector" d="M17.7778 2.5H16.6667V0.5H14.4444V2.5H5.55556V0.5H3.33333V2.5H2.22222C0.988889 2.5 0.0111111 3.4 0.0111111 4.5L0 18.5C0 19.6 0.988889 20.5 2.22222 20.5H17.7778C19 20.5 20 19.6 20 18.5V4.5C20 3.4 19 2.5 17.7778 2.5ZM17.7778 18.5H2.22222V7.5H17.7778V18.5ZM4.44444 9.5H10V14.5H4.44444V9.5Z" fill="#3A3A3A" stroke="#3A3A3A" stroke-width="0.00064"/>
+</g>
+<defs>
+<clipPath id="clip0_182_68">
+<rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg>
