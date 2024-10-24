@@ -12,9 +12,7 @@ How to Run the Project:
 
     Navigate to the backend/api folder.
 
-    Add a .env file with the following content:
-
-MONGO_URL="<your-mongodb-url>"
+    Add a .env file with the following content: MONGO_URL="<your-mongodb-url>"
 
 In the root directory, run:
 
