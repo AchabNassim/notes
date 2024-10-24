@@ -14,13 +14,9 @@ How to Run the Project:
 
     Add a .env file with the following content:
 
-    makefile
-
 MONGO_URL="<your-mongodb-url>"
 
 In the root directory, run:
-
-bash
 
 docker compose up --build -d
 
