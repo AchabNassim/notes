@@ -31,6 +31,7 @@ const Login = ({setSection}) => {
                 });
                 console.log (response.status);
                 if (response.status === 200) {
+                    console.log("works!");
                     setIsLogged(true);
                 } else {
                     alert("Couldn't login, please fill the form fields correctly");

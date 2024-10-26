@@ -13,6 +13,8 @@ import IdeasSvg from "../assets/svg/categories/ideas.svg";
 import QuotesSvg from "../assets/svg/categories/quotes.svg";
 import OtherSvg from "../assets/svg/categories/other.svg";
 import ArchiveSvg from "../assets/svg/general/archiveC.svg";
+import { Context } from "../../App.jsx";
+
 
 const categoryIcons = {
     All: AllSvg,
@@ -28,6 +30,7 @@ const categoryIcons = {
   };
 
 const CategoriesContainer = () => {
+    const {isLogged, setIsLogged} = useContext(Context);
     const {setChosenCategory, isCreateMode, isEditMode} = useContext(notesContext);
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const categories = ["All", "Today", "Todo", "Personal", "Health", "Finance", "Studies", "Ideas", "Quotes", "Other"];
@@ -50,6 +53,11 @@ const CategoriesContainer = () => {
         console.log(index);
     }
 
+    const handleLogout = () => {
+        fetch("http://localhost:3000/logout");
+        setIsLogged(false);
+    }
+
     return (
         <div style={containerStyle}>
             {categories.map((category, index) => {
@@ -66,6 +74,9 @@ const CategoriesContainer = () => {
                 <img src={ArchiveSvg}></img>
                 <span style={{marginLeft: "8px", fontSize: "1rem"}}>Archive</span>
                 <div className={`borderDiv ${categories.length === selectedIndex ? "isSelected" : "hh"}`}></div>
+            </div>
+            <div style={{marginTop: "9px"}} className="categoryElement" onClick={handleLogout}>
+                <span style={{marginLeft: "8px", fontSize: "1rem"}}>Archive</span>
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ FROM node:22
 
 WORKDIR /app
 
-COPY ./notesApp /app
+COPY ./notesApp/* /app
 
 RUN npm install && sleep 4
 
