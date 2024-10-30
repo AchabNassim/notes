@@ -6,7 +6,7 @@ const Login = ({setSection}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isSent, setIsSent] = useState(false);
-
+    const {isLogged, setIsLogged} = useContext(Context);
 
     const handleChange = (e, setValue) => {
         setValue(e.target.value);

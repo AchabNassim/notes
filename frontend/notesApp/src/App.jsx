@@ -8,7 +8,7 @@ const Context = createContext(null);
 function App() {
   const [isLogged, setIsLogged] = useState(false);
   useEffect(() => {
-    if (!isLogged) {
+    if (isLogged == false) {
       const authenticate = async () => {
         try {
             const response = await fetch("http://localhost:3000/login", {
@@ -19,6 +19,7 @@ function App() {
                 },
             });
             if (response.status === 200) {
+              console.log("works!");
               setIsLogged(true);
             }
         } catch (e) {
@@ -27,7 +28,7 @@ function App() {
       }
       authenticate();
     }
-    
+    console.log(isLogged)
 }, [isLogged]);
 
   return (

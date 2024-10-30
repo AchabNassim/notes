@@ -13,7 +13,7 @@ import IdeasSvg from "../assets/svg/categories/ideas.svg";
 import QuotesSvg from "../assets/svg/categories/quotes.svg";
 import OtherSvg from "../assets/svg/categories/other.svg";
 import ArchiveSvg from "../assets/svg/general/archiveC.svg";
-import { Context } from "../../App.jsx";
+import { Context } from "../App.jsx";
 
 
 const categoryIcons = {
@@ -54,7 +54,10 @@ const CategoriesContainer = () => {
     }
 
     const handleLogout = () => {
-        fetch("http://localhost:3000/logout");
+        fetch("http://localhost:3000/logout", {
+            credentials: "include",
+            method: "GET"
+        });
         setIsLogged(false);
     }
 
@@ -75,8 +78,8 @@ const CategoriesContainer = () => {
                 <span style={{marginLeft: "8px", fontSize: "1rem"}}>Archive</span>
                 <div className={`borderDiv ${categories.length === selectedIndex ? "isSelected" : "hh"}`}></div>
             </div>
-            <div style={{marginTop: "9px"}} className="categoryElement" onClick={handleLogout}>
-                <span style={{marginLeft: "8px", fontSize: "1rem"}}>Archive</span>
+            <div style={{marginTop: "9px"}} className="categoryElement" onClick={() => handleLogout()}>
+                <span style={{marginLeft: "8px", marginTop: "4rem", fontSize: "1rem"}}>Logout</span>
             </div>
         </div>
     )
