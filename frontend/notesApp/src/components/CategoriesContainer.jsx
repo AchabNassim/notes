@@ -53,11 +53,12 @@ const CategoriesContainer = () => {
         console.log(index);
     }
 
-    const handleLogout = () => {
-        fetch("http://localhost:3000/logout", {
+    const handleLogout = async () => {
+        const response = await fetch("http://localhost:3000/logout", {
             credentials: "include",
             method: "GET"
         });
+        console.log(response);
         setIsLogged(false);
     }
 
